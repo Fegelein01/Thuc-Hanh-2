@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Taco Cloud</title>
+	<link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+
+<body>
+	<form method="POST" th:action="@{/ingredient/add}" th:object="${ingredient}">
+		<h1>Add new product</h1>
+		<h3>Input the product information ...</h3>
+		<table cellspacing="5" border="0">
+			<tr>
+				<td align="right"><label for="id">ID: </label></td>
+				<td align="right"><input type="text" th:field="*{id}" /></td>
+			</tr>
+			<tr>
+				<td align="right"><label for="name">Des: </label></td>
+				<td align="right"><input type="text" th:field="*{name}" /></td>
+			</tr>
+			<tr>
+				<td align="right"><label for="price">Price: </label></td>
+				<td align="right"><input type="text" th:field="*{price}" /></td>
+			</tr>
+			<tr>
+				<td align="right"><label for="type">Type: </label></td>
+				<td align="left">
+					<select th:field="*{type}">
+						<option th:value="'Music'" th:text="Music"></option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><br><input type="submit" value="Add Product"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<title>Taco Cloud</title>
+	<link rel="stylesheet" th:href="@{/styles.css}" />
+</head>
+
+<body>
+	<h1>Are you sure you want to delete this product?</h1>
+	<table cellspacing="5" border="0">
+		<tr>
+			<td align="right"><label for="id">ID: </label></td>
+			<td align="left"><label th:text="${ingredient.id}"></label></td>
+		</tr>
+		<tr>
+			<td align="right"><label for="name">Description: </label></td>
+			<td align="left"><label th:text="${ingredient.name}"></label></td>
+		</tr>
+		<tr>
+			<td align="right"><label for="type">Price: </label></td>
+			<td align="left"><label th:text="${ingredient.price}"></label></td>
+		</tr>
+		<tr>
+			<td align="right"><label for="type">Type: </label></td>
+			<td align="left"><label th:text="${ingredient.type}"></label></td>
+		</tr>
+	</table>
+	<form action="/ingredient/delete/yes" method="get">
+		<input type="submit" value="Yes">
+		<input type="hidden" name ="id" th:value="${ingredient.id}">
+	</form>
+	<form action="/ingredient/delete/no" method="get">
+		<input type="submit" value="No">
+		<input type="hidden" name ="id" th:value="${ingredient.id}">
+	</form>
+</body>
+
+</html>
