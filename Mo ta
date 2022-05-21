@@ -13,3 +13,4 @@ Edit thì tương tự, nó gọi đến IngredientController ở đây sẽ chu
 Sau đó sẽ dùng post và đẩy về IngredientController.
 ở đây repository ( đã bổ sung hàm edit dùng câu lệnh update và cập nhật).
 Cơ sở dữ liệu như bài mẫu, được thêm cột price double và sửa lại JDBC cho phù hợp.
+Người Làm : Nguyễn Việt Hưng
